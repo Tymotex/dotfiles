@@ -1,0 +1,17 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!.zshrc
+!.zsh_profile
+!.xinitrc
+!.vimrc
+!.tmux.conf
+!.bashrc
+!.bash_profile
+!.inputrc
+!.nvidia-settings-rc
+!.p10k.zsh
+!.screenlayout
+# etc...

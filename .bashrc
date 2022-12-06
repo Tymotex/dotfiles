@@ -161,3 +161,4 @@ set -o vi
   # exec tmux-dev
 # fi
 
+. "$HOME/.cargo/env"

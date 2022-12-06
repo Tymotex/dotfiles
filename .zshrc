@@ -78,7 +78,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-better-npm-completion)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -147,7 +147,7 @@ alias timz='cd ~/Projects/timz.dev && code . && exit'
 alias galactic='cd ~/Projects/GalacticEd && code . && exit'
 alias structs='cd ~/Projects/Structs.sh && code . && exit'
 alias projects='cd ~/Projects'
-alias grind='cd ~/grind && code . && exit'
+alias grind='cd ~/Grind && code . && exit'
 alias experiments='cd ~/Experiments'
 alias pictures='cd ~/Pictures'
 alias downloads='cd ~/Downloads'
@@ -160,8 +160,13 @@ alias math='cd ~/Projects/math-website && code . && exit'
 
 alias i3conf='vim ~/.config/i3/config'
 alias i3r='i3-msg reload'
-
 alias zshconf='vim ~/.zshrc'
+
+alias wiki='cd ~/Projects/wiki/ && code . && exit'
+
+alias books='open ~/Books &; exit'
+
+alias monitor='nvidia-settings --assign CurrentMetaMode="DVI-D-0: nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }, DP-0: nvidia-auto-select +2560+0 { ForceFullCompositionPipeline = On }, DP-4: nvidia-auto-select +6000+0 { ForceFullCompositionPipeline = On }"'
 
 # Quickly open projects:
 alias p1='code ~/Projects/1* && exit'
@@ -174,8 +179,16 @@ alias p7='code ~/Projects/7* && exit'
 alias p8='code ~/Projects/8* && exit'
 alias p9='code ~/Projects/9* && exit'
 
+alias konflux='code ~/Projects/konflux && exit'
+
+alias s='yarn dev'
+
+alias ts='code ~/Projects/wiki/code/programming-typescript && exit'
+
+alias logi='sudo systemctl restart logid'
+
 # ===== Custom Scripts =====
-export PATH=/home/tim/Scripts:$PATH
+export PATH=~/Scripts:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -183,5 +196,18 @@ export NVM_DIR="$HOME/.nvm"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
+alias copy='xclip -selection clipboard'
+
 setxkbmap -option caps:escape
+
+# VSCode Helpers
+eval "$VSCODE_RUN"
+ 
+# ===== Go Configuration =====
+export GOPATH=/home/tym/go
+export PATH=$PATH:$GOPATH/bin
+export GOPROXY="https://goproxy.cn,direct"
+
+# ===== Flutter Configuration =====
+export CHROME_EXECUTABLE=google-chrome-stable
 
